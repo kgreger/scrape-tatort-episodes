@@ -11,9 +11,9 @@ dienstgrade <- c("Hauptkommissare", "Kommissare", "Hauptkommissar", "Kommissar",
                  "MAD-Oberstleutnant", "Polizeihauptmeister", "Wachtmeister")
 einsatzorte <- c("Hamburg", "Saarbrücken", "Köln", "Stuttgart", "Frankfurt", "Kiel", "Wien", "Berlin", 
                  "München", "Baden-Baden", "Bremen", "Essen", "Hannover", "Mainz", "Braunschweig", 
-                 "Endwarden", "Duisburg", "Lübeck", "Bremerhaven", "Stade", "Heppenheim", "Ludwigshafen", 
-                 "Bern", "Leipzig", "Düsseldorf", "Konstanz", "Münster", "Wiesbaden", "Luzern", "Dortmund", 
-                 "Erfurt", "Weimar", "Nürnberg", "Dresden", "Freiburg")
+                 "Endwarden", "Duisburg", "Lübeck", "Bremerhaven", "Stade", "Heppenheim (Bergstraße)", 
+                 "Ludwigshafen", "Berne", "Leipzig", "Düsseldorf", "Konstanz", "Münster", "Wiesbaden", 
+                 "Luzern", "Dortmund", "Erfurt", "Weimar", "Nürnberg", "Dresden", "Freiburg")
 einsatzbundesländer <- c("Hamburg", "Saarland", "Nordrhein-Westfalen", "Baden-Württemberg", "Hessen", 
                          "Schleswig-Holstein", "Wien", "Berlin", "Bayern", "Baden-Württemberg", "Bremen", 
                          "Nordrhein-Westfalen", "Niedersachsen", "Rheinland-Pfalz", "Niedersachsen", 
@@ -241,6 +241,12 @@ kommissare <- kommissare.ehemalig %>%
   ### Einsatzort
   mutate(Einsatzort = gsub("Franken",
                            "Nürnberg",
+                           Einsatzort)) %>%
+  mutate(Einsatzort = gsub("Heppenheim",
+                           "Heppenheim (Bergstraße)",
+                           Einsatzort)) %>%
+  mutate(Einsatzort = gsub("Bern",
+                           "Berne",
                            Einsatzort)) %>%
   mutate(Einsatzort = gsub("Leipzig und Dresden",
                            "Leipzig",
