@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.0.0000.0000                                -->
+<datasource formatted-name='Extract' inline='true' source-platform='win' version='10.5' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection name='hyper_0'>
+        <connection access_mode='readwrite' author-locale='en_US' class='hyper' dbname='C:/Users/kgreger/Documents/GitHub/scrape-tatort-episodes/Tatort-Folgen.hyper' default-settings='yes' output-to-hyper-file='yes' schema='Extract' site-name=':fake-loom-site-writer' sslmode='' tablename='Extract' username='tableau_internal_user' />
+      </named-connection>
+    </named-connections>
+    <relation connection='hyper_0' name='Extract' table='[Extract].[Extract]' type='table' />
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>Folge</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Folge]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Folge</remote-alias>
+        <ordinal>0</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Titel</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Titel]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Titel</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Sender</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Sender]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Sender</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Erstausstrahlung</remote-name>
+        <remote-type>133</remote-type>
+        <local-name>[Erstausstrahlung]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Erstausstrahlung</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>date</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Ermittler</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Ermittler]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Ermittler</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Fall</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Fall]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Fall</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Autor</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Autor]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Autor</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Regie</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Regie]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Regie</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Besonderheiten</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Besonderheiten]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Besonderheiten</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Kommissare</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Kommissare]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Kommissare</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stadt</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Stadt]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Stadt</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Bundesland</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Bundesland]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Bundesland</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Land</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Land]</local-name>
+        <parent-name>[Extract]</parent-name>
+        <remote-alias>Land</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+</datasource>
